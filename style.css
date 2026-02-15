@@ -94,17 +94,56 @@ h1 {
   color: #0c0c0f;
 }
 
-/* IMAGE */
-.image-placeholder {
+/* DARK TEXTURE CARD */
+.hero-image {
+  position: relative;
   width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #1a1a1f, #141419);
-  border-radius: 12px;
+  height: 420px;
+}
+
+.texture-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #141418 0%,
+    #101014 40%,
+    #0d0d11 100%
+  );
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 60px rgba(0, 0, 0, 0.4);
   transition: transform 0.6s ease;
 }
 
-.image-placeholder:hover {
-  transform: scale(1.03);
+.texture-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.texture-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.texture-card:hover {
+  transform: scale(1.02);
 }
 
 /* WORK */
@@ -136,7 +175,7 @@ h1 {
 }
 
 .content.active {
-  max-height: 200px;
+  max-height: 500px;
 }
 
 /* BEYOND */
@@ -164,9 +203,10 @@ footer {
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .image-placeholder {
+  .hero-image {
     height: 300px;
   }
 }
