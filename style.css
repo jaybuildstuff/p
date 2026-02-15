@@ -1,0 +1,154 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 40px 60px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 80px;
+}
+
+.top-links a {
+  color: #888;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.top-links a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 120px;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.role {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.bio {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  text-align: right;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* WORK */
+.work h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.category {
+  border-top: 1px solid #333;
+  padding: 20px 0;
+}
+
+.category-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.category-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.category-content.expanded {
+  max-height: 200px;
+}
+
+/* HOBBY */
+.hobby {
+  margin-top: 120px;
+}
+
+.hobby h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hobby p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 120px;
+  color: #555;
+  font-size: 14px;
+}
